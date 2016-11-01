@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Country List
+Job List
 @endsection
 @section('content')
 <div class="content-wrapper">

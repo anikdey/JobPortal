@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Add New Country
+Add New Department
 @endsection
 @section('content')
 <div class="row">

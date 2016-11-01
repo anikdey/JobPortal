@@ -15,6 +15,7 @@ class ComposerServiceProvider extends ServiceProvider {
                 'admin.jobPost.create',
                 'admin.jobPost.edit',
                 'admin.jobPost.search',
+                'admin.application.search',
                 'admin.jobPost.searchResult',
                 'front.home'
             ],

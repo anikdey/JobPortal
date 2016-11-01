@@ -22,7 +22,6 @@
                     </a>
 
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        {{--<li><a href="profile.html">Profile</a></li>--}}
                         <li><a href="{{ URL::to('logout') }}">Logout</a></li>
                         <li class="divider"></li>
                     </ul>
@@ -37,6 +36,7 @@
                     <span class="nav-label">Dashboard</span>
                 </a>
             </li>
+
             <li class="">
                 <a href="{{ URL::to('admin/job-list') }}">
                     <i class="fa fa-sliders"></i>
@@ -57,6 +57,15 @@
                             <span class="label label-primary pull-right">NEW</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ URL::to('admin/job/search-job') }}" >
+                            Search Job
+                            <span class="label label-primary pull-right">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </a>
+                    </li>
+
                 </ul>
             </li>
 
@@ -82,6 +91,36 @@
                     </li>
                 </ul>
             </li>
+
+
+            <li class="">
+                <a href="{{ URL::to('admin/application-list') }}">
+                    <i class="fa fa-sliders"></i>
+                    <span class="nav-label">Applications</span> <span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{ URL::to('admin/application-list') }}" >
+                            Application List
+                            <span class="label label-primary pull-right">
+                                <i class="fa fa-bars"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ URL::to('admin/application-search') }}" >
+                            Search Application
+                            <span class="label label-primary pull-right">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
 
         </ul>
     </div>

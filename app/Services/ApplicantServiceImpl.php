@@ -8,6 +8,7 @@
 
 namespace App\Services;
 use App\Model\Application;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\Request;
 
 class ApplicantServiceImpl implements ApplicantService {
@@ -18,7 +19,6 @@ class ApplicantServiceImpl implements ApplicantService {
     {
         $this->application = $application;
     }
-
 
     public function getApplicationsWithPagination($itemsPerPage){
         return $this->application->paginate($itemsPerPage);
@@ -67,7 +67,6 @@ class ApplicantServiceImpl implements ApplicantService {
     }
 
     public function deleteApplicationById($applicationId){
-
         $application = $this->findApplicationById($applicationId);
         if($application->picture) {
             Storage::delete('/uploads/photos/'.$application->picture);
@@ -75,9 +74,7 @@ class ApplicantServiceImpl implements ApplicantService {
         if($application->cv) {
             Storage::delete('/uploads/cvs/'.$application->cv);
         }
-
         $application->delete($applicationId);
-
     }
 
 } 
