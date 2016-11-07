@@ -79,18 +79,14 @@ class ApplicantServiceImpl implements ApplicantService {
     }
 
     public function  ajaxSearchApplication(Request $request){
-
        // $jobTitle = $request->input('jobTitle');
         $departmentId = $request->input('departmentId');
       //  $minExpectedSalary = $request->input('minExpectedSalary');
       //  $maxExpectedSalary = $request->input('maxExpectedSalary');
-
         return $applications = $this->application
             ->where('departmentId', 'like', "%".$departmentId."%")
             //->whereBetween('expectedSalary', array($minExpectedSalary, $maxExpectedSalary))
             ->get();
-
-
     }
 
 } 

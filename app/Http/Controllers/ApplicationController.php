@@ -15,10 +15,8 @@ use Illuminate\Support\Facades\Validator;
 class ApplicationController extends Controller
 {
 
-
     private $jobPostService;
     private $applicantService;
-
     public function __construct(JobPostService $jobPostService, ApplicantService $applicantService)
     {
         $this->jobPostService = $jobPostService;
@@ -59,7 +57,6 @@ class ApplicationController extends Controller
         }
     }
 
-
     public function getSearchResult(Request $request){
         if(Auth::check() && Auth::user()->role == "ADMIN") {
             $applications = $this->applicantService->ajaxSearchApplication($request);
@@ -69,12 +66,6 @@ class ApplicationController extends Controller
             return Redirect::to('/');
         }
     }
-
-
-
-
-
-
 
     public function showApplicationsByJobId($jobId) {
         if(Auth::check() && Auth::user()->role == "ADMIN") {

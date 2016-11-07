@@ -10,7 +10,9 @@
         {!! Html::style('js/plugins/gritter/jquery.gritter.css') !!}
         {!! Html::style('css/animate.css') !!}
         {!! Html::style('css/style.css') !!}
+        {!! Html::style('css/jquery.dataTables.css') !!}
         {!! Html::script('js/jquery-2.1.1.js') !!}
+        {!! Html::script('js/jquery.dataTables.js') !!}
         <script type="text/javascript">
             function checkDelete() {
                 var $chk = confirm('Are You Sure You Want To Delete This?');

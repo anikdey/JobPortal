@@ -30,7 +30,7 @@ Job List
                     </div>
                 </div>
                 <div class="ibox-content">
-                    <table class="table table-responsive table-bordered  table-hover">
+                    <table class="table table-responsive table-bordered  table-hover jobListTable">
                         <thead>
                         <tr>
                             <th class="text-center">Job ID</th>
@@ -74,8 +74,15 @@ Job List
                         </tbody>
                     </table>
                     <div class="box-footer clearfix">
-                        {{ $jobPosts->links() }}
+                        {{--{{ $jobPosts->links() }}--}}
                     </div>
+
+                    <script>
+                        $('.jobListTable').DataTable({
+                            select: true
+                        });
+                    </script>
+
                 </div>
             </div>
         </div>

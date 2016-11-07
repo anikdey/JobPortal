@@ -25,7 +25,8 @@ class JobPostController extends Controller{
 
     public function index() {
         if(Auth::check() && Auth::user()->role == "ADMIN") {
-            $jobPosts = $this->jobPostService->getJobPostWithPagination(10);
+           // $jobPosts = $this->jobPostService->getJobPostWithPagination(10);
+            $jobPosts = $this->jobPostService->getAllJobPost();
             $sidebar = view('inc.sidebar');
             $header = view('inc.header');
             $footer = view('inc.footer');
