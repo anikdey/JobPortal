@@ -71,7 +71,7 @@ class JobPostServiceImpl implements JobPostService {
         $deadLineTo = $request->input('deadLineTo');
         return $this->jobPost->where('jobTitle', 'like', "%".$jobTitle."%")
             ->where('departmentId', 'like', "%".$departmentId."%")
-            ->whereBetween('deadline', array($deadLineFrom, $deadLineTo))
+           // ->whereBetween('deadline', array($deadLineFrom, $deadLineTo))
             ->get();
     }
 

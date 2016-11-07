@@ -24,6 +24,8 @@ interface ApplicantService {
 
     public function deleteApplicationById($applicationId);
 
+    public function  ajaxSearchApplication(Request $request);
+
 //public function updateDepartmentById($id, Request $request);
 
     //public function getLastInsertedId();

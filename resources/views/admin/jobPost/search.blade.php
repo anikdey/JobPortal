@@ -27,7 +27,7 @@ Search Job
                     </div>
                 </div>
                 <div class="ibox-content">
-                    {!! Form::open(array('url'=>'/apply-to-job/', 'method'=>'POST', 'class'=>'form', 'id'=>'jobSearchForm', 'role'=>'form')) !!}
+                    {!! Form::open(array('class'=>'form', 'id'=>'jobSearchForm', 'role'=>'form')) !!}
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="form-group <?php  if($errors->has('jobTitle')){ echo 'has-error'; }?> ">
@@ -44,36 +44,13 @@ Search Job
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
-                                <div class="form-group <?php  if($errors->has('deadLineFrom')){ echo 'has-error'; }?> ">
-                                   Deadline From
-                                </div>
-                            </div>
                             <div class="col-lg-3">
-                                <div class="form-group <?php  if($errors->has('deadLineFrom')){ echo 'has-error'; }?> ">
-                                   <input type="date" name="deadLineFrom" id="deadLineFrom" value="{{ Input::old('deadLineFrom') }}" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-1">
-                                <div class="form-group <?php  if($errors->has('deadLineTo')){ echo 'has-error'; }?> ">
-                                   Deadline To
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="form-group <?php  if($errors->has('deadLineTo')){ echo 'has-error'; }?> ">
-                                   <input type="date" name="deadLineTo" id="deadLineTo" value="{{ Input::old('deadLineTo') }}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="form-group <?php  if($errors->has('departmentName')){ echo 'has-error'; }?> ">
+                                <div class="form-group ">
                                    <button type="submit" class="btn btn-sm btn-white">Search</button>
                                 </div>
                             </div>
                         </div>
                     {!! Form::close() !!}
-
                     <script>
                         $("#jobSearchForm").submit(function(event){
                           var jobTitle = $('#jobTitle').val();
@@ -98,9 +75,7 @@ Search Job
                         });
                     </script>
                   <hr/>
-                  <div id="showSearchResult">
-
-                  </div>
+                  <div id="showSearchResult"></div>
                 </div>
             </div>
         </div>

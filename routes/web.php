@@ -43,6 +43,9 @@ Route::group(['middleware' => ['auth', 'roleAdmin'], 'prefix' => 'admin'], funct
     Route::get('/job/application-to-job/{id}', 'ApplicationController@showApplicationsByJobId');
     Route::post('/job/ajax-delete-application', 'ApplicationController@ajaxDeleteApplicationById');
     Route::get('/application/delete/{applicationId}', 'ApplicationController@deleteApplicationById');
+    Route::post('/application/ajax-search-application', 'ApplicationController@getSearchResult');
+
+
 
 
     Route::get('/download-cv/{filename}', 'AdminController@downloadAttachment');

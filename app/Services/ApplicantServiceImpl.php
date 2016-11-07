@@ -10,6 +10,7 @@ namespace App\Services;
 use App\Model\Application;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\Request;
+use DB;
 
 class ApplicantServiceImpl implements ApplicantService {
 
@@ -75,6 +76,21 @@ class ApplicantServiceImpl implements ApplicantService {
             Storage::delete('/uploads/cvs/'.$application->cv);
         }
         $application->delete($applicationId);
+    }
+
+    public function  ajaxSearchApplication(Request $request){
+
+       // $jobTitle = $request->input('jobTitle');
+        $departmentId = $request->input('departmentId');
+      //  $minExpectedSalary = $request->input('minExpectedSalary');
+      //  $maxExpectedSalary = $request->input('maxExpectedSalary');
+
+        return $applications = $this->application
+            ->where('departmentId', 'like', "%".$departmentId."%")
+            //->whereBetween('expectedSalary', array($minExpectedSalary, $maxExpectedSalary))
+            ->get();
+
+
     }
 
 } 
