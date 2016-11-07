@@ -41,8 +41,6 @@ class JobPostController extends Controller{
         }
     }
 
-
-
     public function showSearchJobView(){
         if(Auth::check() && Auth::user()->role == "ADMIN") {
             $sidebar = view('inc.sidebar');

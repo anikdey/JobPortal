@@ -5,6 +5,7 @@ Job List
 @section('content')
 <div class="content-wrapper">
     <section class="content">
+        <div class="row">
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
@@ -77,6 +78,7 @@ Job List
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 </div>
